@@ -1,0 +1,32 @@
+.btn{
+  
+    width: 99%;
+    border: none;
+    background-color: #fff;
+    color: #464544;
+    padding: 12px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10cm;
+    
+    text-align: center;
+  }
+  
+  .pn{
+      text-decoration: none;
+      color: #464544;
+  }
+  
+    
+    .btn:hover, .btn:active a{
+      background-color: rgb(151, 163, 167);
+      color: black;
+    }
+  
+    .btn:hover {
+      box-shadow:  4px 4px 6px 0 rgba(209, 204, 204, 0.938),
+                  -4px -4px 6px 0 rgba(135, 136, 138, 0.877), 
+        inset -4px -4px 6px 0 rgba(56, 52, 52, 0.829),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, 0.623);
+    }

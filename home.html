@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    /* Reset CSS */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Logo */
+    .logo {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Main Content */
+    main {
+      margin: 10px auto;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    /* Social Media Icons */
+    .social-media-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-media-icons a {
+      display: inline-block;
+      margin-left: 10px;
+      width: 34px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-icons a:hover {
+      opacity: 0.7;
+    }
+    
+    /* Social Media Navigation Links */
+    .social-media-navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-media-navigation li {
+      display: inline-block;
+    }
+    
+    .social-media-navigation li a {
+      display: inline-block;
+      width: 60px; /* Adjusted width */
+      height: 60px; /* Adjusted height */
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-navigation li a:hover {
+      opacity: 0.7;
+    }
+    
+    .social-media-navigation li a.facebook {
+      background-image: url("fb.jpg");
+    }
+    
+    .social-media-navigation li a.twitter {
+      background-image: url("twit.jpg");
+    }
+    
+    .social-media-navigation li a.linkedin {
+      background-image: url("linkn.jpg");
+    }
+    
+    .social-media-navigation li a.youtube {
+      background-image: url("utube.jpg");
+    }
+    
+    .social-media-navigation li a.instagram {
+      background-image: url("insta.jpg");
+    }
+
+    h2 {
+      font-size: 22px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      color: black; /* Specify your desired color */
+    }
+    
+    /* Modified CSS for Navigation Table */
+    .navigation-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 200px;
+    }
+    
+    .navigation-content {
+      padding-right: 5px;
+    }
+    
+    /* CSS for Admin and Faculty Portal links */
+    .navigation-table-cell .navigation-links {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navigation-table-cell .navigation-links ul li {
+      margin-bottom: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul li a:hover {
+      background-color: #555;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .navigation-table {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Amrita University Invigilator Management System</h1>
+  </header>
+  
+  <nav>
+    <img src="amritalogo.jpg" alt="Logo" class="logo" width="250" height="45">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <img src="amrita_univerty.jpg" alt="alternative_text" width="1000" height="400" class="center" >
+  <main>
+    <div class="navigation-table">
+      <div class="navigation-content">
+        <h2>About the Portal</h2>
+        <p>This portal caters to the internal requirements of staff and students in the campus. It gives access to all the services hosted as part of the IT Services in the campus. Users can also get information on various activities in the campus.</p>
+        <p>The Information and Communication Technology Services (ICTS) Department is responsible for identifying, providing and maintaining reliable computing facilities, computing network environment, communication facilities and related infrastructure to facilitate education, research, instructional and Institute approved business services.</p>
+        <p>The department administers all computer laboratories on campus. The facilities are made available to the staff and students from 8.00 AM to 10.30 PM on all days excluding national holidays. The laboratories extend all facilities required by students to fulfill their requirements for academic purposes. The department staff in these labs also assists students in their academic work. Currently, the department is equipped with more than 1000 computer systems on campus and other facilities.</p>
+      </div>
+      <div class="navigation-table-cell">
+        <div class="navigation-links">
+          <h2>Portal</h2>
+          <ul>
+            <li><a href="admin1.html">Admin Login</a></li>
+            <li><a href="login_form.php">Faculty Login</a></li>
+          </ul>
+        </div>
+        <div class="navigation-links">
+          <h2>Notice</h2>
+          <ul>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="examcell.html">Exam cell</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <!-- Social Media Navigation Links -->
+    <nav class="social-media-navigation">
+      <ul>
+        <li><h2>FOLLOW US ON SOCIAL MEDIA</h2></li>
+        <br>
+        <li><a href="https://www.facebook.com/AmritaUniversity/" class="facebook"></a></li>
+        <li><a href="https://twitter.com/AMRITAedu" class="twitter"></a></li>
+        <li><a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" class="linkedin"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCVEeVDos5a4S9sMPK4jPUzA" class="youtube"></a></li>
+        <li><a href="https://instagram.com/amritacoimbatorecampus" class="instagram"></a></li>
+      </ul>
+    </nav>
+  
+    <br>
+    &copy; ICTS, Amrita Vishwa Vidyapeetham, Coimbatore. All rights reserved.
+  </footer>
+</body>
+</html>

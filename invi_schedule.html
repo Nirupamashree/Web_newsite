@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invigilation Slot Allocation</title>
+</head>
+<body>
+    <h1>Invigilation Slot Allocation</h1>
+
+    <form id="slotAllocationForm">
+        <label for="faculty">Select Faculty:</label>
+        <select id="faculty">
+            <option value="select">select</option>
+            <option value="faculty 1">Faculty 1</option>
+            <option value="faculty 2">Faculty 2</option>
+            <option value="faculty 3">Faculty 3</option>
+            <option value="faculty 4">Faculty 4</option>
+            <option value="faculty 5">Faculty 5</option>
+            <option value="faculty 6">Faculty 6</option>
+            <option value="faculty 7">Faculty 7</option>
+            <option value="faculty 8">Faculty 8</option>
+            <option value="faculty 9">Faculty 9</option>
+            <option value="faculty 10">Faculty 10</option>
+            <!-- Add more options as needed -->
+        </select>
+        &nbsp;
+        &nbsp;
+        <label for="venue">Select Venue:</label>
+        <select id="venue">
+            <option value="select">select</option>
+            <option value="venue 1">Venue 1</option>
+            <option value="venue 2">Venue 2</option>
+            <option value="venue 3">Venue 3</option>
+            <!-- Add more options as needed -->
+        </select>
+        &nbsp;
+        &nbsp;
+        <label for="slot">Select Slot:</label>
+        <select id="slot">
+            <option value="select">select</option>
+            <option value="slot 1">Slot 1</option>
+            <option value="slot 2">Slot 2</option>
+            <option value="slot 3">Slot 3</option>
+            <option value="slot 4">Slot 4</option>
+            <option value="slot 5">Slot 5</option>
+            <option value="slot 6">Slot 6</option>
+            <option value="slot 7">Slot 7</option>
+            <option value="slot 8">Slot 8</option>
+            <!-- Add more options as needed -->
+        </select>
+        &nbsp;
+        &nbsp;
+        <label for="subject">Enter Subject:</label>
+        <input type="text" id="subject">
+
+        <button type="button" onclick="allocateSlot()">Allocate Slot</button>
+    </form>
+    &nbsp;
+    &nbsp;
+    <div style="text-align:center;">
+
+    <table id="allocatedSlotsTable" border="1" cellspacing="" cellpadding="10" align="center">
+        <br>
+        <br>
+        <tr>
+            <th>Faculty</th>
+            <th>Venue</th>
+            <th>Slot</th>
+            <th>Subject</th>
+        </tr>
+    </table>
+    </div>
+    
+    <script>
+        function allocateSlot() {
+            var faculty = document.getElementById("faculty").value;
+            var venue = document.getElementById("venue").value;
+            var slot = document.getElementById("slot").value;
+            var subject = document.getElementById("subject").value;
+
+            // Create a new row in the table
+            var table = document.getElementById("allocatedSlotsTable");
+            var newRow = table.insertRow(table.rows.length);
+
+            // Insert cells in the new row
+            var facultyCell = newRow.insertCell(0);
+            var venueCell = newRow.insertCell(1);
+            var slotCell = newRow.insertCell(2);
+            var subjectCell = newRow.insertCell(3);
+
+            // Set the cell values
+            facultyCell.innerHTML = faculty;
+            venueCell.innerHTML = venue;
+            slotCell.innerHTML = slot;
+            subjectCell.innerHTML = subject;
+
+            // Reset the form fields
+            document.getElementById("faculty").value = "";
+            document.getElementById("venue").value = "";
+            document.getElementById("slot").value = "";
+            document.getElementById("subject").value = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #181818;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+        }
+
+        th:nth-child(even),td:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faculty Timetable</h1>
+
+    <form>
+        <label for="faculty">Select Faculty:</label>
+        <select id="faculty" onchange="showTimetable()">
+            <option value="select">Select</option>
+            <option value="faculty1">Faculty 1</option>
+            <option value="faculty2">Faculty 2</option>
+            <option value="faculty3">Faculty 3</option>
+            <option value="faculty4">Faculty 4</option>
+            <option value="faculty5">Faculty 5</option>
+            <option value="faculty6">Faculty 6</option>
+            <option value="faculty7">Faculty 7</option>
+            <option value="faculty8">Faculty 8</option>
+            <option value="faculty9">Faculty 9</option>
+            <option value="faculty10">Faculty 10</option>
+            <!-- Add more options as needed -->
+        </select>
+    </form>
+    <br>
+    <br>
+    <div id="timetable"></div>
+    <script>
+        // JavaScript code here
+        // Your existing JavaScript code goes here...
+ var timetables = {
+            "faculty1": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "19CSE311", "", "19CSE332", "", "19CSE313", "19CSE313", ""],
+                ["Tuesday", "", "", "19CSE311", "", "", "", "", ""],
+                ["Wednesday", "19CSE311", "", "", "19CSE102", "19CSE102", "", "19CSE332", ""],
+                ["Thursday", "", "", "18CSE383", "18CSE383", "", "19CSE213", "19CSE213", ""],
+                ["Friday", "", "", "19CSE332", "", "", "", "", ""],
+            ],
+           
+        "faculty2": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "19CSE302", "", "", "", "", "", ""],
+                ["Tuesday", "", "19CSE302", "", "19CSE303", "", "", "", "19CSE201"],
+                ["Wednesday", "", "19CSE303", "19CSE303", "", "", "", "", "19CSE302"],
+                ["Thursday", "", "", "", "19CSE302", "19CSE302", "", "", ""],
+                ["Friday", "19CSE302", "", "", "", "", "", "", ""],
+            ],
+            "faculty3": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "19CSE313", "", "", "19CSE313", "19CSE313", ""],
+                ["Tuesday", "", "19CSE313", "", "", "", "", "", ""],
+                ["Wednesday", "19CSE313", "", "19CSE313", "", "", "", "", ""],
+                ["Thursday", "19CSE313", "19CSE313", "", "", "", "", "19CSE456", "19CSE456"],
+                ["Friday", "", "Mentoring", "", "", "", "", "", ""],
+            ],
+            "faculty4": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "", "19CSE434", "", "19CSE313", "19CSE313", ""],
+                ["Tuesday", "", "", "19CSE314", "19CSE314", "", "", "", ""],
+                ["Wednesday", "", "Proj 1", "", "19CSE111", "", "", "19CSE434", "19CSE434"],
+                ["Thursday", "19CSE313", "19CSE313", "", "", "", "Mentoring", "", ""],
+                ["Friday", "19CSE111", "", "19CSE434", "", "", "", "", ""],
+            ],
+            "faculty5": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "19CSE456", "", "19CSE102", "", "", "UG proj", "", ""],
+                ["Tuesday", "", "19CSE102", "", "", "", "19CSE102", "19CSE102", ""],
+                ["Wednesday", "", "", "", "19CSE456", "", "19CSE312", "19CSE312", ""],
+                ["Thursday", "19CSE102", "", "", "", "", "", "19CSE456", "19CSE456"],
+                ["Friday", "", "phD-Guide", "", "", "", "PG proj", "", ""],
+            ],
+            "faculty6": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "", "", "19CSE212", "", "19CSE211", "19CSE211"],
+                ["Tuesday", "19CSE214", "", "19CSE314", "", "", "19CSE211", "19CSE211", ""],
+                ["Wednesday", "", "19CSE214", "", "", "", "", "19CSE434", "19CSE434"],
+                ["Thursday", "", "", "", "Mentoring", "", "", "19CSE456", "19CSE456"],
+                ["Friday", "", "", "phD-Guide", "", "B.Tech proj", "", "M.Tech proj", ""],
+            ],
+            "faculty7": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "", "", "", "19CSE212", "19CSE212", ""],
+                ["Tuesday", "", "", "19CSE214", "", "", "19CSE102", "19CSE102", ""],
+                ["Wednesday", "", "", "", "Mentoring", "", "Proj-Guide", "Proj-Guide", ""],
+                ["Thursday", "", "", "", "", "19CSE214", "", "Proj-Guide", "Proj-Guide"],
+                ["Friday", "", "", "19CSE213", "19CSE213", "19CSE214", "", "", ""],
+            ],
+            "faculty8": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "Proj-Guide", "", "", "19CSE314", "", "", ""],
+                ["Tuesday", "", "", "19CSE314", "19CSE314", "", "", "", ""],
+                ["Wednesday", "19CSE314", "19CSE314", "", "", "19CSE314", "19CSE102", "19CSE102", ""],
+                ["Thursday", "", "Proj-Guide", "", "", "", "19CSE314", "", ""],
+                ["Friday", "", "Proj-Guide", "", "19CSE314", "", "19CSE102", "", ""],
+            ],
+            "faculty9": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "", "19CSE312", "", "", "", ""],
+                ["Tuesday", "19CSE312", "", "", "", "19CSE211", "", "", ""],
+                ["Wednesday", "", "", "", "", "", "19CSE312", "19CSE312", ""],
+                ["Thursday", "19CSE211", "", "19CSE312", "", "", "", "19CSE456", "19CSE456"],
+                ["Friday", "19CSE211", "19CSE211", "", "", "", "19CSE312", "", ""],
+            ],
+            "faculty10": [
+                ["", "Slot 1", "Slot 2", "Slot 3", "Slot 4", "Slot 5", "Slot 6", "Slot 7", "Slot 8"],
+                ["Monday", "", "", "19CSE102", "", "", "19CSE213", "19CSE213", ""],
+                ["Tuesday", "", "19CSE102", "", "", "", "19CSE103", "19CSE103", ""],
+                ["Wednesday", "", "19CSE103", "", "19CSE102", "", "", "", ""],
+                ["Thursday", "", "19CSE103", "", "", "", "19CSE102", "19CSE102", ""],
+                ["Friday", "", "", "", "", "19CSE102", "", "", ""],
+            ]
+            // Add more faculty timetables as needed
+        };
+
+        function showTimetable() {
+            var faculty = document.getElementById("faculty").value;
+            var timetable = timetables[faculty];
+
+            var tableHtml = "<table border='1'><tr>";
+            for (var i = 0; i < timetable[0].length; i++) {
+                tableHtml += "<th>" + timetable[0][i] + "</th>";
+            }
+            tableHtml += "</tr>";
+
+            for (var i = 1; i < timetable.length; i++) {
+                tableHtml += "<tr>";
+                for (var j = 0; j < timetable[i].length; j++) {
+                    tableHtml += "<td>" + timetable[i][j] + "</td>";
+                }
+                tableHtml += "</tr>";
+            }
+
+            tableHtml += "</table>";
+
+            document.getElementById("timetable").innerHTML = tableHtml;
+        }
+    </script>
+</body>
+</html>

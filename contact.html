@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Logo */
+    .logo {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Main Content */
+    main {
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center; /* Center align the content within the main container */
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    /* Map Container */
+    .mapouter {
+      position: relative;
+      text-align: center;
+      margin: 20px auto; /* Adjust the margin to center the map */
+      height: 500px;
+      width: 1000px;
+    }
+    
+    .gmap_canvas {
+      overflow: hidden;
+      background: none!important;
+      height: 500px;
+      width: 1000px;
+      margin: 0 auto; /* Center align the map container */
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Logo */
+    .logo {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Main Content */
+    main {
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+     /* Social Media Icons */
+     .social-media-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-media-icons a {
+      display: inline-block;
+      margin-left: 10px;
+      width: 34px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-icons a:hover {
+      opacity: 0.7;
+    }
+    
+    /* Social Media Navigation Links */
+    .social-media-navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-media-navigation li {
+      display: inline-block;
+    }
+    
+    .social-media-navigation li a {
+      display: inline-block;
+      width: 60px; /* Adjusted width */
+      height: 60px; /* Adjusted height */
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-navigation li a:hover {
+      opacity: 0.7;
+    }
+    
+    .social-media-navigation li a.facebook {
+      background-image: url("fb.jpg");
+    }
+    
+    .social-media-navigation li a.twitter {
+      background-image: url("twit.jpg");
+    }
+    
+    .social-media-navigation li a.linkedin {
+      background-image: url("linkn.jpg");
+    }
+    .social-media-navigation li a.youtube {
+      background-image: url("utube.jpg");
+    }
+    .social-media-navigation li a.instagram {
+      background-image: url("insta.jpg");
+    }
+
+    h2
+    {
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    color:black; /* Specify your desired color */
+    }
+
+</style>
+</head>
+<body>
+    <header>
+      <h1>Amrita University Invigilator Management System</h1>
+    </header>
+    
+    <nav>
+      <img src="amritalogo.jpg" alt="Logo" class="logo" width="300" height="45">
+      <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="1150" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Amrita%20vishwa%20vidyapeetham%20Coimbatore,%20Ettimadai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-i.net">123movies new site</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:1150px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:1150px}</style></div></div>
+
+    <div property="schema:text" class="text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+    <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Registrar's Office : +91-422-2685111<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Campus Director's Office : +91-422-2685010<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Corporate and Industry Relations  :  +91-422-2685005, +91-422-2685004<br />
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Human Resource Director's office : +91-422-2685031</p>
+        
+        <p><strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Amrita School of Engineering :</strong><br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dean's Office : +91-422-2685502<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dy. Dean's Office : +91-422-2685503<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Administrative Office : +91-422-2685509<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Accounts Office : +91-422-2685072<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dy. Controller's Office : +91-422-2685064<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Professor of Students Welfare : +91-422-2685050</p>
+        
+        <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Amrita School of Business :</strong><br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dean's Office : +91-422-2685401<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Administrative Office : +91-422-2685402<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Admission Office : +91-422-2685407, +91-422-2685410<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dy. Controller's Office : +91-422-2685437<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Post Graduate Programs Office : +91-422-2685403<br />
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ph.D Office : +91-422-2685447</p>
+</div>
+<footer>
+    <!-- Social Media Navigation Links -->
+    <nav class="social-media-navigation">
+      <ul>
+        <li><h2>FOLLOW US ON SOCIAL MEDIA</h2></li>
+        <br>
+        <li><a href="https://www.facebook.com/AmritaUniversity/" class="facebook"></a></li>
+        <li><a href="https://twitter.com/AMRITAedu" class="twitter"></a></li>
+        <li><a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" class="linkedin"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCVEeVDos5a4S9sMPK4jPUzA" class="youtube"></a></li>
+        <li><a href="https://instagram.com/amritacoimbatorecampus" class="instagram"></a></li>
+        
+      </ul>
+    </nav>
+  
+    <br>
+    &copy; ICTS, Amrita Vishwa Vidyapeetham, Coimbatore. All rights reserved.
+  </footer>
+</body>
+</html>      

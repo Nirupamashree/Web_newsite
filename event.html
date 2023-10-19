@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+    /* Reset CSS */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    .event {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .event-date {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .event-venue {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    
+    .event-description {
+      color: #666666;
+    }
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Logo */
+    .logo {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Main Content */
+    main {
+      margin: 10px auto;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    /* Social Media Icons */
+    .social-media-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-media-icons a {
+      display: inline-block;
+      margin-left: 10px;
+      width: 34px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-icons a:hover {
+      opacity: 0.7;
+    }
+    
+    /* Social Media Navigation Links */
+    .social-media-navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-media-navigation li {
+      display: inline-block;
+    }
+    
+    .social-media-navigation li a {
+      display: inline-block;
+      width: 60px; /* Adjusted width */
+      height: 60px; /* Adjusted height */
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-navigation li a:hover {
+      opacity: 0.7;
+    }
+    
+    .social-media-navigation li a.facebook {
+      background-image: url("fb.jpg");
+    }
+    
+    .social-media-navigation li a.twitter {
+      background-image: url("twit.jpg");
+    }
+    
+    .social-media-navigation li a.linkedin {
+      background-image: url("linkn.jpg");
+    }
+    
+    .social-media-navigation li a.youtube {
+      background-image: url("utube.jpg");
+    }
+    
+    .social-media-navigation li a.instagram {
+      background-image: url("insta.jpg");
+    }
+
+    h2 {
+      font-size: 22px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      color: black; /* Specify your desired color */
+    }
+    
+    /* Modified CSS for Navigation Table */
+    .navigation-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 200px;
+    }
+    
+    .navigation-content {
+      padding-right: 5px;
+    }
+    
+    /* CSS for Admin and Faculty Portal links */
+    .navigation-table-cell .navigation-links {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navigation-table-cell .navigation-links ul li {
+      margin-bottom: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .navigation-table-cell .navigation-links ul li a:hover {
+      background-color: #555;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .navigation-table {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Amrita University Invigilator Management System</h1>
+  </header>
+  
+  <nav>
+    <img src="amritalogo.jpg" alt="Logo" class="logo" width="300" height="45">
+    <ul>
+      <li><a href="home.php">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <h1>&nbsp; &nbsp;  Upcoming Events</h1>
+<br>
+  <div class="event">
+    <h2 class="event-date">March 21, 2023</h2>
+    <h3 class="event-venue">Koodiyattam -An art practice from Kerala: Main ground</h3>
+    <p class="event-description">On the eve of Shubhakrit Ugadi, Keli in association with Amrita Vidyapeetham will present a Koodiyattam performance by some of the eminent young artistes in the field today.</p>
+  </div>
+
+  <div class="event">
+    <h2 class="event-date">April 05, 2023</h2>
+    <h3 class="event-venue">THIRU VIZHA -2023: Main Auditorium</h3>
+    <p class="event-description">Tamil New Year is a special occasion that is celebrated by Tamilians all around the world. Tamil New Year for 2023 will be celebrated in our campus in the name "THIRU VIZHA -2023"..</p>
+  </div>
+
+  <div class="event">
+    <h2 class="event-date">April 07, 2023</h2>
+    <h3 class="event-venue">Battle of the bands: Main Auditorium</h3>
+    <p class="event-description">Sonix is a two-day event initiated by the Department of Mass Communication, Amrita Vishwa Vidyapeetham, Coimbatore. The event is scheduled for two days 7th and 8th of April with a complete entertainment package of competitions, concerts, and a wide variety of stalls.</p>
+  </div>
+
+  <div class="event">
+    <h2 class="event-date">April 07, 2023</h2>
+    <h3 class="event-venue">NADOPASANA: Main Auditorium</h3>
+    <p class="event-description">At the request of Ashram, Naadam club will be presenting a performance at the Nataraja statue in front of AB-2, on Friday (07 April 2023) at 6:00 PM, Join us in the musical Evening.</p>
+  </div>
+
+  <div class="event">
+    <h2 class="event-date">April 08, 2023</h2>
+    <h3 class="event-venue">Masala Coffee: Main ground</h3>
+    <p class="event-description">Who does not love to taste the best flavor of coffee!? Just like that who does not wish to listen to music with the perfect mix of beats, composition, rhythm, and ear wishes singing at the best. Day 2 on 8th April 2023, Sonix serves the perfect vibe of music with a mind-fill audio/visual treat.</p>
+  </div>
+
+  <div class="event">
+    <h2 class="event-date">April 27, 2023</h2>
+    <h3 class="event-venue">SNAKES TO GOODIES: Main ground</h3>
+    <p class="event-description">Are you ready for a really exciting yet challenging fun game? If your answer is "YES"! You are in for a promising fun time in our ARYA club's "SNAKES TO GOODIES"!</p>
+  </div>
+  
+  <footer>
+    <!-- Social Media Navigation Links -->
+    <nav class="social-media-navigation">
+      <ul>
+        <li><h2>FOLLOW US ON SOCIAL MEDIA</h2></li>
+        <br>
+        <li><a href="https://www.facebook.com/AmritaUniversity/" class="facebook"></a></li>
+        <li><a href="https://twitter.com/AMRITAedu" class="twitter"></a></li>
+        <li><a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" class="linkedin"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCVEeVDos5a4S9sMPK4jPUzA" class="youtube"></a></li>
+        <li><a href="https://instagram.com/amritacoimbatorecampus" class="instagram"></a></li>
+      </ul>
+    </nav>
+  
+    <br>
+    &copy; ICTS, Amrita Vishwa Vidyapeetham, Coimbatore. All rights reserved.
+  </footer>
+</body>
+</html>

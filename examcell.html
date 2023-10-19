@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Cell</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    /* Logo */
+    .logo {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    /* Main Content */
+    main {
+      margin: 10px auto;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    /* Social Media Icons */
+    .social-media-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .social-media-icons a {
+      display: inline-block;
+      margin-left: 10px;
+      width: 34px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-icons a:hover {
+      opacity: 0.7;
+    }
+    
+    /* Social Media Navigation Links */
+    .social-media-navigation {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-media-navigation li {
+      display: inline-block;
+    }
+    
+    .social-media-navigation li a {
+      display: inline-block;
+      width: 60px; /* Adjusted width */
+      height: 60px; /* Adjusted height */
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: opacity 0.3s ease;
+    }
+    
+    .social-media-navigation li a:hover {
+      opacity: 0.7;
+    }
+    
+    .social-media-navigation li a.facebook {
+      background-image: url("fb.jpg");
+    }
+    
+    .social-media-navigation li a.twitter {
+      background-image: url("twit.jpg");
+    }
+    
+    .social-media-navigation li a.linkedin {
+      background-image: url("linkn.jpg");
+    }
+    
+    .social-media-navigation li a.youtube {
+      background-image: url("utube.jpg");
+    }
+    
+    .social-media-navigation li a.instagram {
+      background-image: url("insta.jpg");
+    }
+ /* Modified CSS for Navigation Table */
+ .navigation-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 200px;
+    }
+    
+    .navigation-content {
+      padding-right: 5px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      color: black; /* Specify your desired color */
+    }
+    .exam-cell {
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .exam-cell h1 {
+      font-size: 24px;
+      margin: 0 0 20px;
+    }
+
+    .exam-cell p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .exam-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    .exam-table th,
+    .exam-table td {
+      padding: 10px;
+      border: 1px solid #dddddd;
+      text-align: left;
+    }
+
+    .exam-table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .exam-table td:last-child {
+      white-space: nowrap;
+    }
+
+    .exam-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .exam-table tbody tr:hover {
+      background-color: #e6e6e6;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Amrita University Invigilator Management System</h1>
+      </header>
+      
+      <nav>
+        <img src="amritalogo.jpg" alt="Logo" class="logo" width="250" height="45">
+        <ul>
+          <li><a href="home.php">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  <div class="exam-cell">
+    <h1>Office of Deputy Controller of Examinations (Dy. CoE)</h1>
+    <p>The Office of Deputy Controller of Examinations is responsible for the conduct of Examinations (Periodicals, End Semester and Supplementary) for all the programs offered by Amrita Vishwa Vidyapeetham, Coimbatore Campus.</p>
+    <p>Dy.CoE Office is responsible for the issue of:</p>
+    <ul>
+      <li>Exam Admit Cards</li>
+      <li>Grade Sheets, Consolidated Grade Sheets and Provisional Certificates</li>
+      <li>Transcripts</li>
+      <li>Duplicate Certificates</li>
+      <li>Conversion Certificate (CGPA to Percentage)</li>
+      <li>Rank Certificate</li>
+      <li>Attestation for Certificates</li>
+    </ul>
+    <p>**Transcripts directly to foreign universities, WES applications, and certificate verification contact Controller of Examination's office (coe@amrita.edu).</p>
+    <table class="exam-table">
+      <thead>
+        <tr>
+          <th>Services</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Exam Admit Cards</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+        <tr>
+          <td>Grade Sheets, Consolidated Grade Sheets and Provisional Certificates</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+        <tr>
+          <td>Transcripts</td>
+          <td>Contact Controller of Examinations (coe@amrita.edu)</td>
+        </tr>
+        <tr>
+          <td>Duplicate Certificates</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+        <tr>
+          <td>Conversion Certificate (CGPA to Percentage)</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+        <tr>
+          <td>Rank Certificate</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+        <tr>
+          <td>Attestation for Certificates</td>
+          <td>Contact Deputy Controller of Examinations</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <!-- Social Media Navigation Links -->
+    <nav class="social-media-navigation">
+      <ul>
+        <li><h2>FOLLOW US ON SOCIAL MEDIA</h2></li>
+        <br>
+        <li><a href="https://www.facebook.com/AmritaUniversity/" class="facebook"></a></li>
+        <li><a href="https://twitter.com/AMRITAedu" class="twitter"></a></li>
+        <li><a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" class="linkedin"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCVEeVDos5a4S9sMPK4jPUzA" class="youtube"></a></li>
+        <li><a href="https://instagram.com/amritacoimbatorecampus" class="instagram"></a></li>
+      </ul>
+    </nav>
+  
+    <br>
+    &copy; ICTS, Amrita Vishwa Vidyapeetham, Coimbatore. All rights reserved.
+  </footer>
+</body>
+</html>
